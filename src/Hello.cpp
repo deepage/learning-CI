@@ -26,8 +26,8 @@
 //     return 0;
 // }
 
-template<>
-int func_add(int* a, int* b, size_t llength, size_t rlength, int* out) {
+template <>
+int func_add(int *a, int *b, size_t llength, size_t rlength, int *out) {
     if (llength != rlength && rlength != 1) {
         printf("size should equ or rlength must be 1!!!\n");
         return -1;
@@ -39,12 +39,12 @@ int func_add(int* a, int* b, size_t llength, size_t rlength, int* out) {
     }
 
     if (rlength == 1) {
-        out = (int*)malloc(llength * sizeof(int));
+        out = (int *)malloc(llength * sizeof(int));
         for (size_t i = 0; i < llength; i++) {
             out[i] = a[i] + b[0];
         }
     } else {
-        out = (int*)malloc(llength * sizeof(int));
+        out = (int *)malloc(llength * sizeof(int));
         for (size_t i = 0; i < llength; i++) {
             out[i] = a[i] + b[i];
         }
@@ -52,8 +52,8 @@ int func_add(int* a, int* b, size_t llength, size_t rlength, int* out) {
     return 0;
 }
 
-template<>
-int func_add(float* a, float* b, size_t llength, size_t rlength, float* out) {
+template <>
+int func_add(float *a, float *b, size_t llength, size_t rlength, float *out) {
     if (llength != rlength && rlength != 1) {
         printf("size should equ or rlength must be 1!!!\n");
         return -1;
@@ -65,12 +65,12 @@ int func_add(float* a, float* b, size_t llength, size_t rlength, float* out) {
     }
 
     if (rlength == 1) {
-        out = (float*)malloc(llength * sizeof(float));
+        out = (float *)malloc(llength * sizeof(float));
         for (size_t i = 0; i < llength; i++) {
             out[i] = a[i] + b[0];
         }
     } else {
-        out = (float*)malloc(llength * sizeof(float));
+        out = (float *)malloc(llength * sizeof(float));
         for (size_t i = 0; i < llength; i++) {
             out[i] = a[i] + b[i];
         }

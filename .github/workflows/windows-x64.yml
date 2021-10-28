@@ -45,7 +45,7 @@ jobs:
       run: |
         mkdir build
         cd build
-        cmake .. -DCMAKE_BUILD_TYPE=${{env.BUILD_TYPE}} -DGTEST_ROOT=${{github.workspace}}/googletest-install
+        cmake .. -DCMAKE_BUILD_TYPE=${{env.BUILD_TYPE}} -DGTEST_ROOT='${{github.workspace}}'/googletest-install
     - name: Build
       run: cmake --build build --config ${{env.BUILD_TYPE}}
 
